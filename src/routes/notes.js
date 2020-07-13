@@ -16,7 +16,7 @@ router.post('/note/new', async (req, res) => {
 
 });
 
-router.get('/note/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     const { id } = req.params;
     try {
         const note = await Note.findOne({ uniqueId: id });
