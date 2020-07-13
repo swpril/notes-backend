@@ -4,7 +4,6 @@ const Note = require('../models/notes');
 const shortid = require('shortid');
 
 router.post('/note/new', async (req, res) => {
-
     const shortId = shortid.generate();
     const note = { ...req.body, uniqueId: shortId };
     const notes = new Note(note);
